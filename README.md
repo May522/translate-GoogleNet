@@ -12,4 +12,24 @@
 
 本文，我们集中精力为机器视觉computer vision创建一种有效的深度神经网络，取名Inception 。本文中，‘deep’一词有两种含义，一种是引入一种新的组织结构，一种是增加网络深度。Inception 模型拥有很复杂的逻辑，主要参考的是 Arora et al[2]中的理论成果。我们的模型最终在ILSVRC-2014的分类和检测classification and detection比赛中获得了头奖，并且远远超出其他选手。
 
+### 2 Related Work
+从LeNet-5开始，卷积神经网络有一种标准的结构，就是，把一个个卷积层叠加起来，中间可选择性的插入contrast normalization层，max-pooling层，最后跟几个全连接层。有很多各种各样的网络应用在图像分类任务中，比如MNIST,CIFAR，还有ImageNet分类挑战赛，都取得了最好的成绩。对于像ImageNet这样大的数据集来说，最近总的趋势是增加层数以及每层的宽度，然后用dropout方法来解决过拟合问题。
+
+
+尽管max-pooling层会损失一些空间精度，但是卷积神经网络框架已经成功应用在定位localization,物体检测object detection, 人姿态检测human pose estimation 。受灵长类视觉皮层的神经学模型的启发，Serre et al.[15] 使用一系列的不同大小的Gabor filters来处理多尺度图像。本文中的Inception模型也是这么做的。然而，相比Serre et al.[15]中固定两层的参数不变，我们的Inception模型并没有这么做，而是学习所有的参数。另外，Inception模型中的层多是重复的层，深度达到22层。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
